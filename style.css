@@ -1,0 +1,820 @@
+html, body, * {
+    padding: 0;
+    margin: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.conta {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+    .header {
+        width: 100%;
+        height: 50px;
+        background-color: #333333;
+        border-bottom: 5px #000000 solid;
+    }
+        .header_logo {
+            float: left;
+            width: 110px;
+            height: 50px;
+            background-image: url(./images/logo.png);
+            background-position: 50% 50%;
+            background-repeat: no-repeat;
+            background-size: auto 80%;
+        }
+        .header_name {
+            float: left;
+            line-height: 50px;
+            padding-left: 5px;
+            color: #ffffff;
+            font-size: 30px;
+        }
+        .header_version {
+            float: left;
+            line-height: 40px;
+            padding-top: 10px;
+            padding-left: 10px;
+            color: #ffffff;
+            font-size: 15px;
+        }
+        .header_icon {
+            float: right;
+            height: 50px;
+            width: 50px;
+            background-position: 50% 50%;
+            background-repeat: no-repeat;
+            background-size: 50% 50%;
+            cursor: pointer;
+        }
+        .header_icon:hover {
+            background-color: #3f3f3f;
+        }
+            .header_info_icon {
+                background-image: url(./images/info.png);
+            }
+            .header_cross_icon {
+                background-image: url(./images/cross.png);
+            }
+
+    .content {
+        position: relative;
+        width: 100%;
+        height: calc(100% - 55px);
+    }
+        .menu_icon {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            top: 0;
+            left: 0;
+            background-image: url(./images/menu.png);
+            background-position: 50% 50%;
+            background-repeat: no-repeat;
+            background-size: 50% 50%;
+            background-color: #000000;
+            cursor: pointer;
+            z-index: 1000;
+        }
+        .menu {
+            float: left;
+            width: 250px;
+            height: calc(100% - 10px);
+            padding: 5px;
+            background-color: #051221;
+            scrollbar-width: thin;
+            overflow-y: scroll;
+        }
+            .menu_conta {
+                float: left;
+                width: calc(100% - 30px);
+                height: 100%;
+            }
+                .menu_columns {
+                    width: 100%;
+                }
+                    .menu_column {
+                        width: calc(100% - 10px);
+                        padding: 0px 5px 10px 5px;
+                    }
+                        .menu_column_title {
+                            width: 100%;
+                            line-height: 30px;
+                            margin-bottom: 5px;
+                            border-bottom: 2px #ffffff solid;
+                            color: #ffffff;
+                            font-size: 20px;
+                            text-align: center;
+                        }
+                        .menu_column_input_text {
+                            display: block;
+                            width: 100%;
+                            line-height: 15px;
+                            padding: 5px;
+                            margin: 5px 0;
+                            border: 0;
+                            border-radius: 6px;
+                            outline: none;
+                            background-color: #333333;
+                            color: #ffffff;
+                            font-size: 16px;
+                        }
+                        .menu_column_conta {
+                            width: 100%;
+                            max-height: 210px;
+                            overflow-y: auto;
+                            scrollbar-width: thin;
+                        }
+                            .menu_column_row {
+                                width: 100%;
+                                height: 30px;
+                            }
+                                .menu_column_row_select {
+                                    width: 100%;
+                                    height: 30px;
+                                    margin: 5px 0;
+                                    color: #fff;
+                                    border: 2px solid #fff;
+                                    background-color: #051221;
+                                }
+                                .menu_column_row_checkbox {
+                                    display: block;
+                                    float: left;
+                                    width: 20px;
+                                    height: 20px;
+                                    margin: 5px 0;
+                                }
+                                .menu_column_row_radio {
+                                    display: block;
+                                    float: left;
+                                    width: 18px;
+                                    height: 18px;
+                                    margin: 6px 0;
+                                }
+                                .menu_column_row_text {
+                                    float: left;
+                                    line-height: 30px;
+                                    padding-left: 5px;
+                                    color: #ffffff;
+                                    font-size: 15px;
+                                }
+                                .menu_column_row_text_split {
+                                    width: calc(100% - 10px);
+                                    line-height: 24px;
+                                    padding: 3px 5px;
+                                }
+                                    .menu_column_row_text_split_inner {
+                                        width: 100%;
+                                        line-height: 22px;
+                                        border-top: 1px #ffffff solid;
+                                        border-bottom: 1px #ffffff solid;
+                                        color: #ffffff;
+                                        font-size: 15px;
+                                        text-align: center;
+                                    }
+
+                .menu_buttons {
+                    width: calc(100% - 10px);
+                    padding: 30px 5px;
+                    padding-bottom: 25px;
+                }
+                    .menu_buttons_line {
+                        height: 1px;
+                        background-color: #ffffff;
+                        width: 100%;
+                        margin-top: 10px;
+                        margin-bottom: 20px;
+                    }
+                    .menu_buttons_row {
+                        width: 100%;
+                        padding-bottom: 10px;
+                    }
+                        .menu_button {
+                            display: block;
+                            float: left;
+                            width: 100%;
+                            height: 30px;
+                            background-color: #038C00;
+                            border-radius: 0;
+                            border: 0;
+                            border-bottom: 4px #025C00 solid;
+                            color: #ffffff;
+                            font-size: 16px;
+                            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                            cursor: pointer;
+                        }
+                        .menu_button:hover {
+                            background-color: #04AD00;
+                        }
+                        .menu_button:active {
+                            height: 28px;
+                            margin-top: 2px;
+                            border-bottom-width: 2px;
+                        }
+                        .menu_button_half_l {
+                            width: calc(50% - 5px);
+                            margin-right: 10px;
+                        }
+                        .menu_button_half_r {
+                            width: calc(50% - 5px);
+                        }
+
+                        .menu_button_disabled {
+                            border-bottom: 4px #242424 solid;
+                            background-color: #454545;
+                            cursor: default;
+                        }
+                        .menu_button_disabled:hover {
+                            background-color: #454545;
+                        }
+                        .menu_button_disabled:active {
+                            height: 30px;
+                            margin-top: 0px;
+                            border-bottom-width: 4px;
+                        }
+
+                .menu_qrpay {
+                    width: calc(100% - 10px);
+                    padding: 30px 5px;
+                    padding-top: 25px;
+                    border-top: 3px #ffffff solid;
+                }
+                    .menu_qrpay_text {
+                        width: 100%;
+                        line-height: 30px;
+                        color: #ffffff;
+                        font-size: 20px;
+                        text-align: center;
+                    }
+                    .menu_qrpay_image {
+                        height: calc(202px - 50px);
+                        width: calc(202px - 50px);
+                        margin: 25px;
+                        background-image: url(./images/qrpay.png);
+                        background-position: 50% 50%;
+                        background-repeat: no-repeat;
+                        background-size: 100% 100%;
+                    }
+                    .menu_qrpay_ghlink {
+                        display: block;
+                        color: #fff;
+                        text-align: center;
+                        font-size: 13px;
+                        cursor: pointer;
+                    }
+
+                .menu_generate_rule {
+                    border: 1px #ffffff solid;
+                    padding: 5px;
+                    margin-bottom: 10px;
+                }
+
+            .menu_icons {
+                float: left;
+                width: 30px;
+                height: 100%;
+            }
+                .menu_cross_icon {
+                    height: 30px;
+                    width: 30px;
+                    background-image: url(./images/cross.png);
+                    background-position: 50% 50%;
+                    background-repeat: no-repeat;
+                    background-size: 60% 60%;
+                    cursor: pointer;
+                }
+
+        .secs {
+            float: left;
+            width: calc(100% - 260px);
+            height: 100%;
+        }
+            .secs_main {
+                width: 100%;
+                height: 100%;
+            }
+                .secs_header {
+                    width: 600px;
+                    margin: 0 auto;
+                    height: 55px;
+                }
+                    .secs_header_elem {
+                        float: left;
+                        width: 190px;
+                        line-height: 50px;
+                        margin: 0 5px;
+                        border-bottom: 2px #040D1F solid;
+                        color: #051221;
+                        font-size: 25px;
+                        text-align: center;
+                        cursor: pointer;
+                    }
+                    .secs_header_elem:hover {
+                        border-bottom-width: 5px;
+                    }
+                    .secs_header_elem_selected {
+                        border-bottom-width: 5px;
+                    }
+
+                .secs_conta {
+                    position: relative;
+                    width: 100%;
+                    height: calc(100% - 55px);
+                    overflow: hidden;
+                }
+                    .sec {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: calc(100% - 10px);
+                        padding: 5px 0px;
+                        overflow: auto;
+                        scrollbar-width: thin;
+                    }
+                        .ranges {
+                            width: calc(100% - 40px);
+                            padding: 0 20px;
+                            padding-bottom: 30px;
+                        }
+                            .range {
+                                width: calc(100% - 20px);
+                                padding: 10px;
+                                margin-bottom: 5px;
+                                border-radius: 5px;
+                                background-color: #d7eed2;
+                                color: #000000;
+                            }
+                                .range_name {
+                                    float: left;
+                                    width: 80px;
+                                    line-height: 30px;
+                                    font-size: 25px;
+                                    font-weight: bold;
+                                    color: #000000;
+                                }
+                                .range_content {
+                                    float: left;
+                                    width: calc(100% - 100px);
+                                }
+                                    .range_raw {
+                                        width: 100%;
+                                        line-height: 30px;
+                                        font-size: 20px;
+                                    }
+                                    .range_columns {
+                                        width: 100%;
+                                        margin-top: 10px;
+                                        border-top: 1px #000000 solid;
+                                    }
+                                        .range_column {
+                                            float: left;
+                                            width: 50%;
+                                        }
+                                            .range_column_title {
+                                                line-height: 20px;
+                                                padding: 15px 0;
+                                                font-size: 18px;
+                                                font-weight: bold;
+                                            }
+                                            .range_row {
+                                                font-size: 18px;
+                                            }
+                                                .range_row_name {
+                                                    float: left;
+                                                    width: 100px;
+                                                    line-height: 30px;
+                                                    font-size: 18px;
+                                                }
+                                                .range_row_value {
+                                                    float: left;
+                                                    line-height: 30px;
+                                                    font-size: 18px;
+                                                }
+                                                .range_row_icon {
+                                                    float: left;
+                                                    height: 30px;
+                                                    width: 30px;
+                                                    margin-left: 5px;
+                                                    background-position: 50% 60%;
+                                                    background-repeat: no-repeat;
+                                                    background-size: 70% 70%;
+                                                }
+                                                    .range_row_icon_cross {
+                                                        background-image: url(./images/cross_mark.png);
+                                                    }
+                                                    .range_row_icon_check {
+                                                        background-image: url(./images/check_mark.png);
+                                                    }
+
+                                                .range_row_mes_red {
+                                                    float: left;
+                                                    width: 100px;
+                                                    line-height: 30px;
+                                                    font-size: 16px;
+                                                    color: #DB1200;
+                                                }
+
+                        .schedule {
+                            width: 1208px;
+                            padding: 20px;
+                            margin: 0 auto;
+                            background-color: #ffffff;
+                        }
+                            .schedule_header {
+                                width: calc(100% - 2px);
+                                height: 40px;
+                                border: 1px #000000 solid;
+                                border-bottom-width: 2px;
+                                background-color: #132448;
+                            }
+                                .schedule_header_cell_week {
+                                    float: left;
+                                    width: 30px;
+                                    height: 40px;
+                                }
+                                .schedule_header_cell {
+                                    float: left;
+                                    width: calc((100% - 30px - 14px) / 14);
+                                    height: 40px;
+                                }
+                                    .schedule_header_cell_top {
+                                        width: calc(100% - 5px);
+                                        line-height: 20px;
+                                        padding-left: 5px;
+                                        color: #ffffff;
+                                        text-align: left;
+                                    }
+                                    .schedule_header_cell_bottom {
+                                        width: calc(100% - 5px);
+                                        line-height: 20px;
+                                        padding-right: 5px;
+                                        color: #ffffff;
+                                        text-align: right;
+                                    }
+
+                                .schedule_header_cell_divider {
+                                    float: left;
+                                    width: 1px;
+                                    height: 40px;
+                                    background-color: #000000;
+                                }
+
+                            .schedule_row {
+                                width: calc(100% - 2px);
+                                border: 1px #000000 solid;
+                                border-top: 0;
+                                border-bottom-width: 2px;
+                            }
+                                .schedule_row_header {
+                                    float: left;
+                                    width: 30px;
+                                    line-height: 78px;
+                                    border-right: 1px #000000 solid;
+                                    background-color: #132448;
+                                    color: #ffffff;
+                                    text-align: center;
+                                }
+                                .schedule_row_layers {
+                                    float: left;
+                                    width: calc(100% - 31px);
+                                    padding: 3px 0px;
+                                }
+                                    .schedule_row_layer {
+                                        position: relative;
+                                        width: 100%;
+                                        height: 90px;
+                                    }
+                                        .schedule_cell {
+                                            position: absolute;
+                                            top: 3px;
+                                            height: 78px;
+                                            border: 3px #000000 dashed;
+                                            border-radius: 3px;
+                                            opacity: 0.75;
+                                        }
+                                        .schedule_cell_week_odd {
+                                            border-color: #335AFF;
+                                        }
+                                        .schedule_cell_week_even {
+                                            border-color: #DB1200;
+                                        }
+                                        .schedule_cell_type_green {
+                                            background-color: #03b300;
+                                        }
+                                        .schedule_cell_type_blue {
+                                            background-color: #15A2DB;
+                                        }
+                                        .schedule_cell_type_yellow {
+                                            background-color: #DBB21F;
+                                        }
+                                        .schedule_cell_type_darkblue {
+                                            background-color: #2900bc;
+                                        }
+                                        .schedule_cell_type_purple {
+                                            background-color: #bc1fdb;
+                                        }
+                                        .schedule_cell_type_red {
+                                            background-color: #db1f1f;
+                                        }
+                                        .schedule_cell_type_orange {
+                                            background-color: #ff8f33 ;
+                                        }
+                                        .schedule_cell_type_brown {
+                                            background-color: #76310f;
+                                        }
+                                        .schedule_cell_type_gray {
+                                            background-color: #4d4d4d;
+                                        }
+                                        .schedule_cell_type_white {
+                                            background-color: #fff;
+                                        }
+                                        .schedule_cell_selected {
+                                            border-style: solid;
+                                            opacity: 1;
+                                            filter: brightness(85%);
+                                        }
+                                        .schedule_cell_deleted {
+                                            opacity: 0.1;
+                                        }
+                                            .schedule_cell a {
+                                                text-decoration: none;
+                                                color: #000000;
+                                            }
+                                            .schedule_cell_name {
+                                                width: 100%;
+                                                line-height: 24px;
+                                                font-size: 20px;
+                                                text-align: center;
+                                                color: #000000;
+                                            }
+                                            .schedule_cell_rooms {
+                                                width: 100%;
+                                                height: 18px;
+                                                line-height: 18px;
+                                                font-size: 10px;
+                                                text-align: center;
+                                                color: #000000;
+                                            }
+                                            .schedule_cell_desc {
+                                                width: 100%;
+                                                height: 18px;
+                                                line-height: 18px;
+                                                font-size: 11px;
+                                                text-align: center;
+                                                color: #000000;
+                                            }
+                                            .schedule_cell_info {
+                                                overflow: hidden;
+                                                width: calc(100% - 10px);
+                                                height: 18px;
+                                                padding: 0 5px;
+                                                line-height: 18px;
+                                                font-size: 11px;
+                                                text-align: center;
+                                                text-overflow: ellipsis;
+                                                white-space: nowrap;
+                                                color: #000000;
+                                            }
+                                            .schedule_cell_star {
+                                                position: absolute;
+                                                top: 3px;
+                                                right: 3px;
+                                                height: 15px;
+                                                width: 15px;
+                                                background-color: #646464;
+                                                background-image: url(images/star.png);
+                                                background-position: 50% 50%;
+                                                background-repeat: no-repeat;
+                                                background-size: 75% 75%;
+                                                cursor: pointer;
+                                                border-radius: 2px;
+                                            }
+                                            .schedule_cell_star:hover {
+                                                background-color: #6b6b6b;
+                                            }
+                                            .schedule_cell_star:active {
+                                                background-color: #454545;
+                                            }
+                                            .schedule_cell_bin {
+                                                position: absolute;
+                                                top: 3px;
+                                                left: 3px;
+                                                height: 15px;
+                                                width: 15px;
+                                                background-color: #646464;
+                                                background-image: url(images/bin.png);
+                                                background-position: 50% 50%;
+                                                background-repeat: no-repeat;
+                                                background-size: 60% 60%;
+                                                cursor: pointer;
+                                                border-radius: 2px;
+                                            }
+                                            .schedule_cell_bin:hover {
+                                                background-color: #6b6b6b;
+                                            }
+                                            .schedule_cell_bin:active {
+                                                background-color: #454545;
+                                            }
+
+            .secs_info, .secs_generator_info {
+                width: calc(100% - 60px - 10px);
+                height: 100%;
+                padding-left: 60px;
+                padding-right: 10px;
+                overflow: auto;
+                scrollbar-width: thin;
+            }
+                .info_half {
+                    float: left;
+                    width: calc(50% - 20px);
+                    padding: 5px 10px;
+                }
+                .info_full {
+                    width: calc(100% - 20px);
+                    padding: 5px 10px;
+                }
+                    .title {
+                        width: 100%;
+                        line-height: 40px;
+                        color: #051221;
+                        font-size: 30px;
+                        border-bottom: 2px #040D1F solid;
+                    }
+                    .bubble {
+                        width: calc(100% - 16px);
+                        max-width: 800px;
+                        padding: 8px;
+                        margin: 10px 0px;
+                        font-size: 18px;
+                        background-color: rgb(255, 231, 145);
+                        border-radius: 8px;
+                    }
+                    .bubble_red {
+                        color: rgb(143, 25, 25);
+                        background-color: rgb(255, 176, 169);
+                    }
+
+                    .foot_left {
+                        float: left;
+                        width: 50%;
+                        padding-bottom: 15px;
+                    }
+                    .foot_right {
+                        float: right;
+                        width: 50%;
+                        padding-bottom: 15px;
+                        text-align: right;
+                        color: #aaa;
+                    }
+
+        .loading_message {
+            float: left;
+            line-height: 70px;
+            padding-left: 30px;
+            color: #333333;
+            font-size: 25px;
+        }
+        .cards {
+            width: 100%;
+            max-width: 1208px;
+            padding: 20px;
+            padding-top: 0;
+            margin: 0 auto;
+        }
+            .lesson_add_card {
+                width: calc(100% - 40px - 10px - 2px);
+                max-width: 300px;
+                margin: 10px 0;
+                padding: 5px;
+                background-color: #f5f5f5;
+                border-radius: 2px;
+                border: 1px #000000 solid;
+            }
+                .lesson_add_card_title {
+                    width: 100%;
+                    line-height: 40px;
+                    margin-bottom: 15px;
+                    border-bottom: 1px #000000 solid;
+                    font-size: 20px;
+                    text-align: center;
+                    font-weight: bold;
+                }
+                .lesson_add_card_row {
+                    width: 100%;
+                    height: 30px;
+                    padding: 5px 0;
+                }
+                    .lesson_add_card_row_text {
+                        float: left;
+                        width: 80px;
+                        line-height: 30px;
+                        font-size: 18px;
+                    }
+                    .lesson_add_card_row_input_text {
+                        display: block;
+                        float: left;
+                        width: calc(100% - 80px);
+                        line-height: calc(30px - 10px - 2px);
+                        padding: 5px;
+                        font-size: 14px;
+                        outline: none;
+                        border: 1px #242424 solid;
+                        border-radius: 2px;
+
+                    }
+                    .lesson_add_card_row_select {
+                        display: block;
+                        float: left;
+                        width: calc(100% - 80px);
+                        height: 30px;
+                        padding: 5px;
+                        font-size: 14px;
+                        outline: none;
+                        border: 1px #242424 solid;
+                        border-radius: 2px;
+                        background-color: #ffffff;
+                    }
+
+                .lesson_add_card_button {
+                    display: block;
+                    width: 100%;
+                    height: 30px;
+                    margin-top: 5px;
+                    border-radius: 0;
+                    border: 0;
+                    border-bottom: 4px #025C00 solid;
+                    background-color: #038C00;
+                    color: #ffffff;
+                    font-size: 16px;
+                    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                    cursor: pointer;
+                }
+                .lesson_add_card_button:hover {
+                    background-color: #04AD00;
+                }
+                .lesson_add_card_button:active {
+                    margin-top: 7px;
+                    height: 28px;
+                    border-bottom-width: 2px;
+                }
+
+code {
+    font-family: monospace;
+    font-size: 0.9em;
+}
+
+.generator_info_icon {
+    cursor: pointer;
+}
+
+.cleaner {
+    clear: both;
+}
+.hidden {
+    display: none;
+}
+.hidden_search {
+    display: none;
+}
+.sec_invisible {
+    left: -100%;
+}
+.secs_menu_hidden {
+    width: 100%;
+}
+
+@media only screen and (max-width: 850px) {
+    .range_column {
+        width: 100%;
+        float: none;
+    }
+}
+@media only screen and (max-width: 750px) {
+    .secs_header {
+        width: 300px;
+    }
+        .secs_header_elem {
+            width: 90px;
+            font-size: 15px;
+            line-height: 25px;
+        }
+}
+@media only screen and (max-width: 450px) {
+    .secs_header {
+        width: 210px;
+    }
+        .secs_header_elem {
+            width: 60px;
+            font-size: 12px;
+            line-height: 25px;
+        }
+
+    .loading_message {
+        font-size: 16px;
+    }
+}
+.secs_header_elem_oneword {
+    line-height: 50px;
+}
